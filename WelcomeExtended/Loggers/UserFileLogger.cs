@@ -2,16 +2,17 @@
 using System.IO;
 using System.Text;
 using Microsoft.Extensions.Logging;
+using Welcome.Model;
 
 namespace WelcomeExtended.Loggers
 {
-    internal class FileLogger : ILogger
+    internal class UserFileLogger : ILogger
     {
         private readonly string _name;
         private static readonly string LogsFilePath;
-        private static readonly object _fileLock = new object();
+        private static readonly object _fileLock = new();
 
-        static FileLogger()
+        static UserFileLogger()
         {
             string baseDirectory = AppContext.BaseDirectory;
 
@@ -26,7 +27,7 @@ namespace WelcomeExtended.Loggers
             Directory.CreateDirectory(logsDirectory);
         }
 
-        public FileLogger(string name)
+        public UserFileLogger(string name)
         {
             _name = name;
         }

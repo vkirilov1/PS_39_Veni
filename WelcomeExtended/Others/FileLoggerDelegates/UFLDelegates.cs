@@ -8,9 +8,9 @@ using WelcomeExtended.Loggers;
 
 namespace WelcomeExtended.Others.FileLoggerDelegates
 {
-    internal class FLDelegates
+    internal class UFLDelegates
     {
-        public static readonly FileLogger logger = new("Logger");
+        public static readonly UserFileLogger logger = new("Logger");
 
         public static void LogError(string error)
         {

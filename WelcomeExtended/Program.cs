@@ -4,6 +4,8 @@ using Welcome.ViewModel;
 using Welcome.View;
 using WelcomeExtended.Others.HashLoggerDelegates;
 using WelcomeExtended.Others.FileLoggerDelegates;
+using WelcomeExtended.Data;
+using WelcomeExtended.Helpers;
 
 namespace WelcomeExtended
 {
@@ -13,34 +15,54 @@ namespace WelcomeExtended
         {
             try
             {
-                var logHLInfo = new ActionOnLog(HLDelegates.LogInformation);
-                var logFLInfo = new ActionOnLog(FLDelegates.LogInformation);
-                logHLInfo("Creating User...");
-                logFLInfo("Creating User...");
-                var user = new User
+                UserData userData = new();
+
+                User studentUser = new()
                 {
-                    Name = "John Smith",
-                    Password = "password123",
+                    Name = "student",
+                    Password = "student123",
                     Role = UserRolesEnum.STUDENT
                 };
-                var viewModel = new UserViewModel(user);
-                var view = new UserView(viewModel);
-                logHLInfo("User created successfully!");
-                logFLInfo("User created successfully!");
-                view.DisplayError("User does not exist!");
+                User studentUser2 = new()
+                {
+                    Name = "student2",
+                    Password = "123",
+                    Role = UserRolesEnum.STUDENT
+                };
+                User teacherUser = new()
+                {
+                    Name = "teacher",
+                    Password = "1234",
+                    Role = UserRolesEnum.PROFESSOR
+                };
+                User adminUser = new()
+                {
+                    Name = "admin",
+                    Password = "admin123",
+                    Role = UserRolesEnum.ADMIN
+                };
+                userData.AddUser(studentUser);
+                userData.AddUser(studentUser2);
+                userData.AddUser(teacherUser);
+                userData.AddUser(adminUser);
+
+                DateTime date = DateTime.Now;
+
+                userData.SetActive("student", date);
+
+                Console.WriteLine("Enter username: ");
+                string username = Console.ReadLine();
+                Console.WriteLine("Enter password: ");
+                string password = Console.ReadLine();
+
+                userData.ValidateCredentials(username, password);
+                User u = userData.GetUser(username, password);
+                Console.WriteLine(UserHelper.ToString(u));
             }
             catch (Exception e)
             {
-                var logHLError = new ActionOnLog(HLDelegates.LogError);
-                logHLError(e.Message);
-                var logFLError = new ActionOnLog(FLDelegates.LogError);
-                logFLError(e.Message);
-                
-            }
-            finally
-            {
-                var logAll = new ActionOnAllLogs(HLDelegates.DisplayAllLogs);
-                logAll();
+                var logError = new ActionOnLog(UFLDelegates.LogError);
+                logError(e.Message);
             }
         }
     }
