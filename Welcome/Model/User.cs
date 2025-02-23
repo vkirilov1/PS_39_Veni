@@ -19,7 +19,7 @@ namespace Welcome.Model
             Role = role;
         }
         public User() { }
-        public int Id
+        public virtual int Id
         {
             get => id;
             set => id = value;
