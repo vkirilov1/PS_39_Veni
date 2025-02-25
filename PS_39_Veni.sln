@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\Data
 		{41211CCF-76EB-4427-B6E7-118A7585769B} = {41211CCF-76EB-4427-B6E7-118A7585769B}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{71BDC7A8-3EB2-4ABE-A3B0-A8B76D41A1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71BDC7A8-3EB2-4ABE-A3B0-A8B76D41A1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71BDC7A8-3EB2-4ABE-A3B0-A8B76D41A1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

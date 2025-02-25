@@ -9,7 +9,7 @@ using Welcome.Others;
 
 namespace DataLayer.Database
 {
-    internal class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
         public DbSet<DatabaseUser> Users { get; set; }
         public DbSet<DBLogEntry> Logs { get; set; }
@@ -53,8 +53,31 @@ namespace DataLayer.Database
                 Expires = DateTime.Now.AddYears(4)
             };
 
+            var testLog = new DBLogEntry()
+            {
+                Id = 1,
+                LogLevel = "INFO",
+                EventId = 1,
+                Message = "Default test log",
+                Exception = null,
+                Timestamp = DateTime.Now
+            };
+
+            var testLogException = new DBLogEntry()
+            {
+                Id = 2,
+                LogLevel = "INFO",
+                EventId = 1,
+                Message = "Default test log",
+                Exception = "Default test exception",
+                Timestamp = DateTime.Now
+            };
+
             modelBuilder.Entity<DatabaseUser>()
                 .HasData(adminUser, professorUser, studentUser);
+
+            modelBuilder.Entity<DBLogEntry>()
+                .HasData(testLog, testLogException);
         }
     }
 }
