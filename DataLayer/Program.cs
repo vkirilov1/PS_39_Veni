@@ -1,8 +1,6 @@
 ﻿using DataLayer.Database;
-using DataLayer.Model;
 using DataLayer.Others.DBLoggerDeleagates;
 using DataLayer.Others.Menus;
-using Welcome.Others;
 
 namespace DataLayer
 {

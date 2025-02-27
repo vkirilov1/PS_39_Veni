@@ -1,11 +1,8 @@
 ﻿using Welcome.Model;
 using Welcome.Others;
-using Welcome.ViewModel;
-using Welcome.View;
-using WelcomeExtended.Others.HashLoggerDelegates;
-using WelcomeExtended.Others.FileLoggerDelegates;
 using WelcomeExtended.Data;
 using WelcomeExtended.Helpers;
+using WelcomeExtended.Others.FileLoggerDelegates;
 
 namespace WelcomeExtended
 {

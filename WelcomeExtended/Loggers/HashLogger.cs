@@ -1,11 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ConstrainedExecution;
 using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
 using WelcomeExtended.Exceptions;
 
 namespace WelcomeExtended.Loggers
@@ -49,7 +44,7 @@ namespace WelcomeExtended.Loggers
         {
             string? message = _logMessages.Remove(keyId, out string? value) ? value : null;
             Console.Write(message);
-            if(message != null)
+            if (message != null)
             {
                 Console.WriteLine($"Log \"{keyId}: {message}\" has been deleted!");
             }

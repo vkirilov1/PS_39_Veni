@@ -1,8 +1,5 @@
-﻿using System;
-using System.IO;
+﻿using Microsoft.Extensions.Logging;
 using System.Text;
-using Microsoft.Extensions.Logging;
-using Welcome.Model;
 
 namespace WelcomeExtended.Loggers
 {
