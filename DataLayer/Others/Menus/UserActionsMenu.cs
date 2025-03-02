@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataLayer.Database;
+﻿using DataLayer.Database;
 using DataLayer.Model;
-using DataLayer.Others.DBLoggerDeleagates;
-using Microsoft.EntityFrameworkCore;
 using Welcome.Others;
 
 namespace DataLayer.Others.Menus

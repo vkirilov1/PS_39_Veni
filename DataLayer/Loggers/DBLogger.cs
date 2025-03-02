@@ -1,12 +1,6 @@
 ﻿using DataLayer.Database;
-using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataLayer.Model;
+using Microsoft.Extensions.Logging;
 
 namespace DataLayer.Loggers
 {

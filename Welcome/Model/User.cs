@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Welcome.Others;
+﻿using Welcome.Others;
 
 namespace Welcome.Model
 {
@@ -28,11 +23,10 @@ namespace Welcome.Model
         public string Password { get; set; }
         public UserRolesEnum Role { get; set; }
         public DateTime Expires
-        { 
+        {
             get => expires;
             set => expires = value;
         }
-
     }
 }
 

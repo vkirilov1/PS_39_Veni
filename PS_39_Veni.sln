@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExample", "WpfExample\WpfExample.csproj", "{CE0BCD52-FAD0-4381-B8CB-C3BB4AFB19F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMVVM", "EasyMVVM\EasyMVVM.csproj", "{F785341A-AF05-4E26-BCB7-400BE2692359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,14 @@ Global
 		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F0F34BB-9B80-447B-83B0-73C716B1B4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0BCD52-FAD0-4381-B8CB-C3BB4AFB19F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0BCD52-FAD0-4381-B8CB-C3BB4AFB19F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0BCD52-FAD0-4381-B8CB-C3BB4AFB19F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0BCD52-FAD0-4381-B8CB-C3BB4AFB19F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F785341A-AF05-4E26-BCB7-400BE2692359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F785341A-AF05-4E26-BCB7-400BE2692359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F785341A-AF05-4E26-BCB7-400BE2692359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F785341A-AF05-4E26-BCB7-400BE2692359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
