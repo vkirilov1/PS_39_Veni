@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfExample.NamesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Commanding Demo" Height="250" Width="300">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- First Name Input -->
+        <Label Grid.Row="0" Grid.Column="0">First Name</Label>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Last Name Input -->
+        <Label Grid.Row="1" Grid.Column="0">Last Name</Label>
+        <TextBox Grid.Row="1" Grid.Column="1"
+                 Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Buttons for Adding and Removing Names -->
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2"
+                    Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Command="{Binding AddNameCommand}" CommandParameter="{Binding .}">Add</Button>
+            <Button Command="{Binding RemoveNameCommand}" CommandParameter="{Binding .}">Remove</Button>
+        </StackPanel>
+
+        <!-- Names List -->
+        <Label Grid.Row="3" Grid.Column="0">Names</Label>
+        <ListBox Grid.Row="3" Grid.Column="1" Margin="5 0"
+                 ItemsSource="{Binding Names}"
+                 SelectedItem="{Binding SelectedName}"
+                 Background="Azure" />
+
+        <!-- Info Button -->
+        <Button Grid.Row="4" Grid.ColumnSpan="2">Info</Button>
+    </Grid>
+</Window>

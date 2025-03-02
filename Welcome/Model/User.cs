@@ -27,7 +27,6 @@ namespace Welcome.Model
             get => expires;
             set => expires = value;
         }
-
     }
 }
 

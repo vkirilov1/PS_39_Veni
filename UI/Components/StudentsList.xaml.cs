@@ -1,5 +1,5 @@
-﻿using DataLayer.Database;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
+using UI.ViewModel;
 
 namespace UI.Components
 {
@@ -11,13 +11,7 @@ namespace UI.Components
         public StudentsList()
         {
             InitializeComponent();
-
-            using (var dbContext = new DatabaseContext())
-            {
-                dbContext.Database.EnsureCreated();
-                var records = dbContext.Users.ToList();
-                students.DataContext = records;
-            }
+            DataContext = new StudentsListViewModel();
         }
     }
 }
