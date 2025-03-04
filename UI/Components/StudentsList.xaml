@@ -13,7 +13,7 @@
     </UserControl.Resources>
 
     <Grid>
-        <DataGrid Name="students" ItemsSource="{Binding}" AutoGenerateColumns="False">
+        <DataGrid Name="students" ItemsSource="{Binding StudentsRecords}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" IsReadOnly="True" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Name" IsReadOnly="True" Binding="{Binding Name}"/>
